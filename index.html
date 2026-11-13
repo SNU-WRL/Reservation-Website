@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src https://script.google.com https://script.googleusercontent.com; base-uri 'none'; form-action 'none'"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <title>Equipment Reservation · Wearable Robotics Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="topbar">
+      <a class="brand" href="#/">
+        <picture>
+          <source media="(max-width: 560px)" srcset="assets/wrl-logo.jpg" width="720" height="175" />
+          <img
+            class="brand-logo"
+            src="assets/wrl-header.png"
+            width="1003"
+            height="120"
+            alt="Wearable Robotics Lab, Seoul National University. Equipment Reservation System"
+          />
+        </picture>
+      </a>
+      <span id="env-badge" class="env-badge" hidden></span>
+      <div id="app-user" class="topbar-user"></div>
+    </header>
+    <p id="app-banner" class="app-banner" role="status" hidden></p>
+    <div class="shell">
+      <nav id="app-nav" class="sidebar" aria-label="Main menu"></nav>
+      <main id="main" tabindex="-1">
+        <div id="view"></div>
+      </main>
+    </div>
+    <nav id="tab-bar" class="tab-bar" aria-label="Main menu"></nav>
+    <div id="busy" class="busy" role="status" hidden>
+      <span class="spinner" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="visually-hidden">Loading</span>
+    </div>
+    <noscript>This page needs JavaScript.</noscript>
+  </body>
+</html>
