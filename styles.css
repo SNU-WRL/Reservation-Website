@@ -443,13 +443,15 @@ a.button {
   text-decoration: none;
 }
 
-button.secondary {
+button.secondary,
+a.button.secondary {
   background: var(--surface);
   border-color: var(--line-strong);
   color: var(--fg-soft);
 }
 
-button.secondary:hover {
+button.secondary:hover,
+a.button.secondary:hover {
   background: var(--surface-muted);
   color: var(--fg);
 }
@@ -491,7 +493,8 @@ button.small.icon-only {
   min-width: 34px;
 }
 
-button svg {
+button svg,
+a.button svg {
   width: 18px;
   height: 18px;
 }
@@ -1087,6 +1090,21 @@ tr[data-selected='true'] td {
 
 .result-card button {
   min-width: 128px;
+}
+
+/* Calendar links under a new reservation (Q-27). */
+.result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+
+.result-actions a.button {
+  min-height: 36px;
+  padding: 0 12px;
+  font-size: 14px;
 }
 
 @keyframes result-fade {
